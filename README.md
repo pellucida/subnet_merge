@@ -10,14 +10,15 @@ when the same file had its line ordering changed.
 
 I thought about the easiest way of doing this and one way of
 sorting the entries and coalescing adjacent entries seemed 
-reasonable "[http://cidrmerge.sourceforge.net/](cidr_merge) does this.
+reasonable [cidrmerge](http://cidrmerge.sourceforge.net/) does this.
 The other was to build a binary tree and merge adjacent entries
 while inserting into the tree.
 I found the second easier to implement.
 
 ### SYNOPSIS
 
-```subnet_merge [ -D ] [ -m C|N|W ] -f network_mask_list_file
+```
+    subnet_merge [ -D ] [ -m C|N|W ] -f network_mask_list_file
                -D	debug info
                -m	mask style for list output
                    C	xx.xx.xx.0/cc		[C]idr
@@ -25,8 +26,9 @@ I found the second easier to implement.
                    W	xx.xx.xx.xx		tcp_[W]rapper
                -f file	input file one entry per line
 ```
-### EXAMPLES</h4>
-<p>
+
+### EXAMPLES
+
 Given an input file containing this list
 
 	10.78.76.0/24
@@ -62,12 +64,15 @@ should be compilable by any C89 compiler. Unsigned int has to
 be 4 bytes or more (otherwise change unsigned int to unsigned long.)
 
 ### SEE ALSO
-[http://cidrmerge.sourceforge.net/](http://cidrmerge.sourceforge.net/)
+
+[http://cidrmerge.sourceforge.net/]
+(http://cidrmerge.sourceforge.net/)
 
 ### LICENSE
 Creative Commons CC0
 [http://creativecommons.org/publicdomain/zero/1.0/legalcode]
 (http://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
+
 ### AUTHOR
-[mailto:toves@sdf.lonestar.org](James Sainsbury)
+[James Sainsbury](mailto:toves@sdf.lonestar.org)
